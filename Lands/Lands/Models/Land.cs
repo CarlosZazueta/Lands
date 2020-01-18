@@ -42,7 +42,7 @@
         public string Demonym { get; set; }
 
         [JsonProperty(PropertyName = "area")]
-        public string Area { get; set; }
+        public double? Area { get; set; }
 
         [JsonProperty(PropertyName = "gini")]
         public double? Gini { get; set; }
