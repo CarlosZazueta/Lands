@@ -102,16 +102,21 @@
 
                     <Image
                         WidthRequest="50"
-                        Source="FacebookLogo"/>
-
+                        Source="FacebookLogo">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LoginFacebookCommand}"/>
+                        </Image.GestureRecognizers>
+                    </Image>
                     <Image
                         Margin="5,0,0,0"
                         WidthRequest="50"
-                        Source="TwitterLogo"/>
-
+                        Source="TwitterLogo">
+                    </Image>
                     <Image
                         WidthRequest="55"
-                        Source="InstagramLogo"/>
+                        Source="InstagramLogo">
+
+                    </Image>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
