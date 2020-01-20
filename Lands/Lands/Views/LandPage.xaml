@@ -4,23 +4,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Lands.Views.LandPage"
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Icon="ic_launcher"
     Title="Land">
     <ContentPage.Content>
         <ScrollView
             BindingContext="{Binding Land}">
             <StackLayout
                 Padding="5">
-                <Label
-                    FontSize="Large"
-                    FontAttributes="Bold"
-                    HorizontalOptions="Center"
-                    Text="{Binding Land.Name}"
-                    TextColor="Black">
-                </Label>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Label
                         Grid.Column="0"

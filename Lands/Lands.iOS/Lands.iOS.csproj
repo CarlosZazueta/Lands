@@ -140,8 +140,15 @@
     <BundleResource Include="Resources\FacebookLogo.png" />
     <BundleResource Include="Resources\TwitterLogo.png" />
     <BundleResource Include="Resources\InstagramLogo.png" />
+    <BundleResource Include="Resources\ic_launcher.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_chevron_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\ic_languages.png" />
+    <AndroidResource Include="Resources\ic_monetization.png" />
+    <AndroidResource Include="Resources\ic_translate.png" />
+    <AndroidResource Include="Resources\ic_people.png" />
   </ItemGroup>
 </Project>
