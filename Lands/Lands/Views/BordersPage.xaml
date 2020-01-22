@@ -8,43 +8,57 @@
     Title="Borders">
     <ContentPage.Content>
         <StackLayout
+            BackgroundColor="#474747"
             BindingContext="{Binding Land}"
             Padding="5">
-            <Label
-                FontSize="Large"
-                FontAttributes="Bold"
-                HorizontalOptions="Center"
-                Text="{Binding Land.Name}"
-                TextColor="Black">
-            </Label>
+            <Frame
+                BackgroundColor="#3D3D3D"
+                CornerRadius="20"
+                HasShadow="true"
+                Margin="5">
+                <Label
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="{Binding Land.Name}"
+                    TextColor="White">
+                </Label>
+            </Frame>
             <ListView
                 HasUnevenRows="True"
                 ItemsSource="{Binding Borders}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="3*"/>
-                                </Grid.ColumnDefinitions>
-                                <Label
-                                    Grid.Row="0"
-                                    Grid.Column="0"
-                                    FontAttributes="Bold"
-                                    FontSize="Medium"
-                                    Text="{Binding Code}"
-                                    TextColor="Black">
-                                </Label>
-                                <Label
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    FontAttributes="Bold"
-                                    FontSize="Medium"
-                                    Text="{Binding Name}"
-                                    TextColor="Black">
-                                </Label>
-                            </Grid>
+                            <Frame
+                                BackgroundColor="#3D3D3D"
+                                CornerRadius="20"
+                                HasShadow="true"
+                                Margin="5">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectLandCommand}"/>
+                                </Frame.GestureRecognizers>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label
+                                        Grid.Column="0"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        Text="{Binding Code}"
+                                        TextColor="White">
+                                    </Label>
+                                    <Label
+                                        Grid.Column="1"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        Text="{Binding Name}"
+                                        TextColor="White">
+                                    </Label>
+                                </Grid>
+                            </Frame>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

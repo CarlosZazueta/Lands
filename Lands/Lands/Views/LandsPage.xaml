@@ -8,15 +8,17 @@
     Title="Informations">
     <ContentPage.Content>
         <StackLayout
+            BackgroundColor="#474747"
             BindingContext="{Binding Lands}">
             <SearchBar
-                BackgroundColor="Silver"
+                BackgroundColor="#3D3D3D"
                 Text="{Binding Filter, Mode=TwoWay}"
+                TextColor="White"
                 Placeholder="Search..."
                 SearchCommand="{Binding SearchCommand}">
             </SearchBar>
             <ListView 
-                BackgroundColor="Silver"
+                BackgroundColor="#474747"
                 HasUnevenRows="true" 
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
@@ -27,6 +29,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <Frame
+                                BackgroundColor="#3D3D3D"
                                 CornerRadius="20"
                                 HasShadow="true"
                                 Margin="5">
@@ -35,16 +38,9 @@
                                 </Frame.GestureRecognizers>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <!--<ColumnDefinition Width="Auto"/>-->
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
-                                    <!--<ffimageloading:CachedImage 
-                                        Grid.Column="0"
-                                        HeightRequest="30"
-                                        Source="{Binding Flag, Converter={StaticResource SvgImageSourceConverter}}"
-                                        WidthRequest="60">
-                                    </ffimageloading:CachedImage>-->
                                     <StackLayout 
                                         Grid.Column="0"
                                         VerticalOptions="Center">
@@ -52,11 +48,11 @@
                                             FontAttributes="Bold"
                                             FontSize="Medium" 
                                             Text="{Binding Name}"
-                                            TextColor="Black">
+                                            TextColor="White">
                                         </Label>
                                         <Label 
                                             Text="{Binding Capital}"
-                                            TextColor="Black">
+                                            TextColor="White">
                                         </Label>
                                     </StackLayout>
                                     <Image 

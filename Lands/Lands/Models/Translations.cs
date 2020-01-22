@@ -20,7 +20,7 @@
         public string Italian { get; set; }
 
         [JsonProperty(PropertyName = "br")]
-        public string Brasilian { get; set; }
+        public string Brazilian { get; set; }
 
         [JsonProperty(PropertyName = "pt")]
         public string Portuguese { get; set; }
@@ -29,9 +29,9 @@
         public string Dutch { get; set; }
 
         [JsonProperty(PropertyName = "hr")]
-        public string Croatia { get; set; }
+        public string Croatian { get; set; }
 
         [JsonProperty(PropertyName = "fa")]
-        public string Danish { get; set; }
+        public string Persian { get; set; }
     }
 }

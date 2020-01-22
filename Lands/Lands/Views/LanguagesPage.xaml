@@ -7,10 +7,67 @@
     Icon="ic_people"
     Title="Languages">
     <ContentPage.Content>
-        <Label
-            Text="Languages"
-            HorizontalOptions="Center"
-            VerticalOptions="Center">
-        </Label>
+        <StackLayout
+            BackgroundColor="#474747"
+            BindingContext="{Binding Land}"
+            Padding="5">
+            <Frame
+                BackgroundColor="#3D3D3D"
+                CornerRadius="20"
+                HasShadow="true"
+                Margin="5">
+                <Label
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="{Binding Land.Name}"
+                    TextColor="White">
+                </Label>
+            </Frame>
+            <ListView
+                HasUnevenRows="True"
+                ItemsSource="{Binding Languages}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                BackgroundColor="#3D3D3D"
+                                CornerRadius="20"
+                                HasShadow="true"
+                                Margin="5">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label
+                                        Grid.Column="0"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        Text="{Binding Iso6392}"
+                                        TextColor="White">
+                                    </Label>
+                                    <Label
+                                        Grid.Column="1"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        Text="{Binding Name}"
+                                        TextColor="White">
+                                    </Label>
+                                    <Label
+                                        Grid.Column="2"
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        Text="{Binding NativeName}"
+                                        TextColor="White">
+                                    </Label>
+                                </Grid>
+                             </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
